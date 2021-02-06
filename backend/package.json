@@ -1,0 +1,27 @@
+{
+  "name": "@graphql-example/backend",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "author": "Pascal Roehling",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dopenguin/graphql-example.git",
+    "directory": "backend"
+  },
+  "scripts": {
+    "build": "cd ../ && npm run frontend:prod && cd backend",
+    "lint": "eslint . --ext .js --cache",
+    "start": "npm run build && cross-env NODE_ENV=prod node index.js",
+    "test": "echo No tests implemented yet."
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.15.1"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "@graphql-example/frontend",
+  "version": "0.1.0",
+  "main": "index.html",
+  "license": "UNLICENSED",
+  "author": "Pascal Roehling",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dopenguin/graphql-example.git",
+    "directory": "frontend"
+  },
+  "scripts": {
+    "clean": "cd .. && npm run clean",
+    "lint": "npx eslint . --ext .js,.vue --cache",
+    "prod": "npm run clean && parcel build index.html -d ../dist/",
+    "start": "npm run clean && parcel index.html -d ../dist/",
+    "test": "echo No tests implemented yet."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.2.0",
+    "axios": "^0.21.1",
+    "eslint-plugin-vue": "^7.5.0",
+    "parcel": "^1.12.4",
+    "parcel-plugin-bundle-visualiser": "^1.2.0",
+    "sass": "^1.32.6",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

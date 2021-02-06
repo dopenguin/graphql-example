@@ -1,0 +1,60 @@
+{
+  "name": "graphql-example",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "author": "Pascal Roehling",
+  "description": "An example project showcasing the usage of GraphQL.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dopenguin/graphql-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dopenguin/graphql-example/issues"
+  },
+  "homepage": "https://github.com/dopenguin/graphql-example#readme",
+  "scripts": {
+    "backend:lint": "cd backend && npm run lint",
+    "backend:start": "cd backend && npm run start",
+    "clean": "rimraf dist",
+    "frontend:lint": "cd frontend && npm run lint",
+    "frontend:prod": "cd frontend && npm run prod",
+    "frontend:start": "cd frontend && npm run start",
+    "lint": "echo Linting backend ... && npm run backend:lint && echo Linting frontend ... && npm run frontend:lint",
+    "preinstall": "echo Installing development dependencies ...",
+    "postinstall": "echo Installing backend dependencies ... && cd backend && npm i && echo Installing frontend dependencies... && cd ../frontend && npm i",
+    "test": "cd backend && npm run test && cd ../frontend && npm run test"
+  },
+  "dependencies": {
+    "@types/node": "^14.14.25"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@underdash/noop": "^1.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "graphql": "^15.5.0",
+    "husky": "^4.3.8",
+    "jsdoc": "^3.6.6",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "vue-eslint-parser": "^7.4.1"
+  },
+  "keywords": [
+    "GraphQL"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test"
+    }
+  }
+}
