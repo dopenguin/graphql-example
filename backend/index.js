@@ -1,5 +1,5 @@
 const express = require('express')
-const graphqlHttp = require('express-graphql')
+const { graphqlHTTP } = require('express-graphql')
 const path = require('path')
 const schema = require('./graphql/schema')
 
@@ -13,7 +13,7 @@ app.use(staticFiles)
 
 app.use(
   '/graphql',
-  graphqlHttp({
+  graphqlHTTP({
     schema,
     graphiql: true
   })
