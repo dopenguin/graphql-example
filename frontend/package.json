@@ -16,7 +16,9 @@
     "start": "npm run clean && parcel index.html -d ../dist/",
     "test": "echo No tests implemented yet."
   },
-  "dependencies": {},
+  "dependencies": {
+    "vue-hot-reload-api": "^2.3.4"
+  },
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.2.0",
     "axios": "^0.21.1",
